@@ -14,13 +14,23 @@
         <tbody>
             @foreach($clients as $client)
             <tr>
-                <th scope="row">{{ $client->id}}</th>
-                <th scope="row">
+                <td scope="row">{{ $client->id}}</td>
+                <td scope="row">
                     <a href="{{ route('clients.show', $client) }}">
                         {{$client->nome}}
                     </a>
-                </th>
-                <th scope="row">{{ $client->endereco}}</th>
+                </td>
+                <td scope="row">{{ $client->endereco}}</td>
+                <td>
+                    <a class="btn btn-primary" href="{{ route('clients.edit', $client) }}">
+                        Editar
+                    </a>
+                    <form action="{{ route('clients.destroy', $client) }}" method="POST">
+                        @csrf
+                        @method('DELETE')
+                        <button class="btn btn-danger" type="submit" onclick="return confirm('Tem certeza que deseja apagar?')">Apagar</button>
+                    </form>
+                </td>
             </tr>
             @endforeach
         </tbody>

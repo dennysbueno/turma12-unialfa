@@ -12,11 +12,16 @@
     <nav class="navbar bg-body-tertiary">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">UniAlfa</a>
+            <div class="navbar-brand">
+                <a class="p-2 text-decoration-none text-black" href="{{ route('clients.index') }}">Clientes</a>
+                <a class="p-2 text-decoration-none text-black" href="{{ route('produtos.index') }}">Produtos</a>
+            </div>
+
         </div>
     </nav>
 
     <div class="container">
-       @yield('content')
+        @yield('content')
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>

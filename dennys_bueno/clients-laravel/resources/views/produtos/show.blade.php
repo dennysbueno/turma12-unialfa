@@ -1,5 +1,5 @@
 @extends('app')
-@section('title', 'Detalhes de Cliente')
+@section('title', 'Detalhes de Produto')
 @section('content')
     <div class="card">
         <div class="card-header">
